@@ -1,21 +1,25 @@
-# adonis-auditable
+# adonis-audit
 Audit models in AdonisJS
+
+## DISCLAIMER
+
+This is just a release for using it through NPM. Not claiming any rights over the original code developed.
 
 ## How to use
 
 Install npm module:
 
 ```bash
-$ adonis install adonis-auditable
+$ adonis install adonis-audit
 ```
 
 ## Register provider
 
-Once you have installed adonis-auditable, make sure to register the provider inside `start/app.js` in order to make use of it.
+Once you have installed adonis-audit, make sure to register the provider inside `start/app.js` in order to make use of it.
 
 ```js
 const providers = [
-  'adonis-auditable/providers/AuditableProvider'
+  'adonis-audit/providers/AuditProvider'
 ]
 ```
 

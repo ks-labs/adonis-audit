@@ -1,5 +1,5 @@
 {
-  "name": "adonis-auditable",
+  "name": "adonis-audit",
   "version": "2.0.1",
   "description": "Audit AdonisJS models",
   "main": " ",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/simontong/adonis-auditable.git"
+    "url": "git+https://github.com/ahtinurme/adonis-audit.git"
   },
   "keywords": [
     "adonis",
@@ -18,9 +18,9 @@
   "author": "Simon Tong <simon@projectplanet.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/simontong/adonis-auditable/issues"
+    "url": "https://github.com/ahtinurme/adonis-audit/issues"
   },
-  "homepage": "https://github.com/simontong/adonis-auditable#readme",
+  "homepage": "https://github.com/ahtinurme/adonis-audit#readme",
   "dependencies": {
     "lodash": "^4.17.4"
   }

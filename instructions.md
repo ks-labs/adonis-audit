@@ -4,7 +4,7 @@ Start by registering the provider inside `start/app.js` file.
 
 ```js
 const providers = [
-  'adonis-auditable/providers/AuditableProvider'
+  'adonis-audit/providers/AuditProvider'
 ]
 ```
 

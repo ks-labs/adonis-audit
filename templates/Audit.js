@@ -1,13 +1,13 @@
-'use strict'
+"use strict";
 
-const Model = use('Model')
+const Model = use("Model");
 
 class Audit extends Model {
   /**
    * @returns {null}
    */
   static get updatedAtColumn () {
-    return null
+    return null;
   }
 
   /**
@@ -17,10 +17,10 @@ class Audit extends Model {
    */
   static get events () {
     return Object.freeze({
-      CREATE: 'create',
-      UPDATE: 'update',
-      DELETE: 'delete',
-    })
+      CREATE: "create",
+      UPDATE: "update",
+      DELETE: "delete",
+    });
   }
 
   /**
@@ -29,7 +29,7 @@ class Audit extends Model {
    */
   getOldData (value) {
     if (value) {
-      return JSON.parse(value)
+      return JSON.parse(value);
     }
   }
 
@@ -39,7 +39,7 @@ class Audit extends Model {
    */
   setOldData (value) {
     if (value !== null) {
-      return JSON.stringify(value)
+      return JSON.stringify(value);
     }
   }
 
@@ -49,7 +49,7 @@ class Audit extends Model {
    */
   getNewData (value) {
     if (value) {
-      return JSON.parse(value)
+      return JSON.parse(value);
     }
   }
 
@@ -59,9 +59,9 @@ class Audit extends Model {
    */
   setNewData (value) {
     if (value !== null) {
-      return JSON.stringify(value)
+      return JSON.stringify(value);
     }
   }
 }
 
-module.exports = Audit
+module.exports = Audit;
