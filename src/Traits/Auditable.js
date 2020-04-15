@@ -35,9 +35,10 @@ function createWithAudit ({ request, auth }) {
     const model = await this.create(data);
     const newModel = (await this.find(model.primaryKeyValue));
     const auditable = newModel.constructor.name;
-    const auditableId = newModel.id;
-    const newData = newModel.$attributes;
+    const auditableId = newModel.id
+    const newData = _.omit(newModel.$attributes, this.constructor.hidden());
     const event = Audit.events.CREATE;
+
 
     // save audit
     await createAudit(event, { request, auth }, auditable, auditableId, null,
@@ -58,11 +59,11 @@ function updateWithAudit ({ request, auth }) {
   return async function (data, ignoreDiff = ["updated_at"]) {
     const auditable = this.constructor.name;
     const auditableId = this.id;
-    const oldData = this.$originalAttributes;
+    const oldData = _.omit(this.$originalAttributes, this.constructor.hidden());
     this.merge(data);
     const result = await this.save();
     const newModel = (await this.constructor.find(this.primaryKeyValue));
-    const newData = newModel.$attributes;
+    const newData = _.omit(newModel.$attributes, this.constructor.hidden());
 
     // if new and old are equal then don't bother updating
     const isEqual = _.isEqual(
@@ -95,7 +96,7 @@ function deleteWithAudit ({ request, auth }) {
   return async function () {
     const auditable = this.constructor.name;
     const auditableId = this.id;
-    const oldData = this.$originalAttributes;
+    const oldData = _.omit(this.$originalAttributes, this.constructor.hidden());
     const result = await this.delete();
 
     // save audit
