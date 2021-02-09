@@ -1,26 +1,26 @@
 {
-  "name": "adonis-audit",
-  "version": "2.0.3",
-  "description": "Audit AdonisJS models",
+  "name": "@ks-labs/adonis-audit",
+  "version": "2.0.4",
+  "description": "Audit AdonisJS models without pain.",
   "main": " ",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ahtinurme/adonis-audit.git"
+    "url": "git+https://github.com/ks-labs/adonis-audit.git"
   },
   "keywords": [
     "adonis",
     "auditable",
     "adonis-auditable"
   ],
-  "author": "Simon Tong <simon@projectplanet.io>",
+  "author": "KS Labs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ahtinurme/adonis-audit/issues"
+    "url": "https://github.com/ks-labs/adonis-audit/issues"
   },
-  "homepage": "https://github.com/ahtinurme/adonis-audit#readme",
+  "homepage": "https://github.com/ks-labs/adonis-audit#readme",
   "dependencies": {
     "lodash": "^4.17.4"
   }
